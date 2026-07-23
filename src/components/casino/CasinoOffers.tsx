@@ -13,6 +13,7 @@ type CasinoOffer = {
 type CasinoOffersProps = {
   offers: CasinoOffer[];
   fallbackUrl: string | null;
+  sweepsCurrencyName: string;
 };
 
 function formatAmount(value: number | string | null) {
@@ -64,6 +65,7 @@ function formatDate(value: string | null) {
 export default function CasinoOffers({
   offers,
   fallbackUrl,
+  sweepsCurrencyName,
 }: CasinoOffersProps) {
   if (offers.length === 0) {
     return (
@@ -101,7 +103,7 @@ export default function CasinoOffers({
 
                   {stakeCash ? (
                     <span className="rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-800">
-                      {stakeCash} Stake Cash
+                      {stakeCash} Sweeps Coins
                     </span>
                   ) : null}
 

@@ -1,0 +1,2 @@
+-- Stake.us was seeded manually before canonical seed files were introduced.
+-- Backfill this file later if needed.
